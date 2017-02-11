@@ -24,21 +24,14 @@ $(document).ready(function() {
 	var projectId = search.substring(1);
 	var table = $("#ProjectTasksTable");
     $.ajax({
-        url : "http://localhost:8080/wwwHomework/project/"+ projectId+"/tasks",
-        type : "GET",
-        dataType : "json",
-        success : function(data) {
-            renderTable(data.task, table);
-        }
+    	 url : "http://localhost:8080/wwwHomework/user/vboi4eva/tasks",
+         type : "GET",
+         dataType : "json",
+         success : function(data) {
+             renderTable(data.task, table);
+         }
     });
-    $.ajax({
-        url : "http://localhost:8080/wwwHomework/project/"+ projectId,
-        type : "GET",
-        dataType : "text",
-        success : function(data) {
-        	document.getElementById("projName").innerHTML = "Project : "+data;
-        }
-    });
+  
 function renderTable(data, table) {
     
     var tableThings = data.length;
@@ -81,9 +74,8 @@ function renderRow(rowData, table) {
 function deleteTask(taskId) {
 	var search= window.location.search; 
 	var projectId = search.substring(1);    
-    
 	$.ajax({
-	    url:"project/"+projectId+ "/task/"+taskId,
+	    url: "task/"+ taskId +"/delete",
 	    type: "DELETE"
 	})
 	.success(function(data) {

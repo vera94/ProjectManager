@@ -69,11 +69,10 @@ public class UserService {
 		}
 		return tasksForUser;
 	}
-	@Path("/{email}/addTask")
+	@Path("/{email}/addTask/{id}")
 	@POST
-	@Consumes(MediaType.APPLICATION_JSON)
-	public void addTaskForUser(@PathParam("email") String email, Task task) {
-		userDAO.addTask(email,task);
+	public void addTaskForUser(@PathParam("email") String email,@PathParam("id") Long id) {
+		userDAO.addTask(email,id);
 	}
 	@Path("/add")
 	@POST

@@ -9,7 +9,7 @@
 <script
 	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/mainFunctions.js"></script>
-<script type="text/javascript" src="js/table2.js"></script>
+<script type="text/javascript" src="js/tasksTable.js"></script>
 <script type="text/javascript" src="js/asign.js"></script>
 <link rel="stylesheet" type="text/css" href="css/style.css">
 <link rel="stylesheet" type="text/css" href="css/signup.css">
@@ -26,35 +26,12 @@
 			<div class="col-md-3" id="menu">
 				<ul class="nav nav-pills nav-stacked">
 					<li><a href="index.html">Home</a></li>
-					<li class="active"><a href="MyProjects.html">My projects</a></li>
-					<li><a href="MyTasks.html">My tasks</a></li>
+					<li><a href="MyProjects.html">My projects</a></li>
+					<li class="active"><a href="MyTasks.html">My tasks</a></li>
 				</ul>
 			</div>
 			<div class="col-md-9" id="detailsPart">
-				<h2>TASKS</h2>
-				<h2 id="projName"></h2>
-				<button onclick="document.getElementById('id04').style.display='block'">Add task</button>
-				<div id="id04" class="modal">
-					<span
-						onclick="document.getElementById('id04').style.display='none'"
-						class="close" title="Close Modal">&times;</span>
-					<form class="modal-content animate" id='addTask' action="index.html" method="post">
-						<div class="container">
-							<label><b>Name</b></label> 
-							<input type="text" id="name"
-								placeholder="Enter Name" name='name' required> 
-							<label><b>Description</b></label>
-							<input type="text" id="description" placeholder="Enter Description" name='description'
-								required>							
-							<div class="clearfix">
-								<button type="button"
-									onclick="document.getElementById('id04').style.display='none'"
-									class="cancelbtn">Cancel</button>
-								<button type="button" onclick="addTask()">Create</button>
-							</div>
-						</div>
-					</form>
-				</div>
+				<h2>MY TASKS</h2>				
 				<div class="table-responsive">
 					<input type="text" id="filterValue" onkeyup="filter()" placeholder="Search for names..">
 					<table class="table" id="ProjectTasksTable">

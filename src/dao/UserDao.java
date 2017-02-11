@@ -90,8 +90,10 @@ public class UserDao {
 		
 	}
 
-	public void addTask(String email, Task task) {
+	public void addTask(String email, Long id) {
 		User user = getUser(email);
+		TypedQuery<Task> query = entityManager.createNamedQuery("findTaskById", Task.class).setParameter("id", id);
+		Task task= query.getSingleResult();
 		List<Task> tasks = user.getTasks();
 		tasks.add(task);
 		entityManager.merge(user);

@@ -47,4 +47,10 @@ public class TaskService {
 		 taskDAO.updateTask(task);
 	}
 	
+	@Path("{id}/completed")
+	@DELETE
+	public void deleteTask(@PathParam("id") Long id){
+		Task task =taskDAO.getTaskById(id);
+		 taskDAO.deleteTask(task);
+	}
 }
