@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Manager</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/mainFunctions.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/signup.css">
+
+</head>
+<body>
+	<div class="main-container">
+
+		<div class="page-header">
+			<h1 id="welcomeText">PROJECT MANAGER</h1>
+			<button
+				onclick="document.getElementById('id01').style.display='block'">Sign
+				up</button>
+			<button
+				onclick="document.getElementById('id02').style.display='block'">Log
+				in</button>
+			<div id="id01" class="modal">
+				<span onclick="document.getElementById('id01').style.display='none'"
+					class="close" title="Close Modal">&times;</span>
+				<form class="modal-content animate" action="action_page.php">
+					<div class="container">
+						<label><b>Email</b></label> <input type="text"
+							placeholder="Enter Email" name="email" required> <label><b>Password</b></label>
+						<input type="password" placeholder="Enter Password" name="psw"
+							required> <label><b>Repeat Password</b></label> <input
+							type="password" placeholder="Repeat Password" name="psw-repeat"
+							required> 
+						<div class="clearfix">
+							<button type="button"
+								onclick="document.getElementById('id01').style.display='none'"
+								class="cancelbtn">Cancel</button>
+							<button type="submit" class="signupbtn">Sign Up</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div id="id02" class="modal">
+				<span onclick="document.getElementById('id02').style.display='none'"
+					class="close" title="Close Modal">&times;</span>
+				<form class="modal-content animate" action="action_page.php">
+					<div class="container">
+						<label><b>Email</b></label> <input type="text"
+							placeholder="Enter Email" name="email" required> <label><b>Password</b></label>
+						<input type="password" placeholder="Enter Password" name="psw"
+							required>
+
+						<div class="clearfix">
+							<button type="button"
+								onclick="document.getElementById('id02').style.display='none'"
+								class="cancelbtn">Cancel</button>
+							<button type="submit" class="signupbtn">Log in</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3" id="menu">
+				<ul class="nav nav-pills nav-stacked">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="MyProjects.html">My projects</a></li>
+				</ul>
+			</div>
+			<div class="col-md-9" id="detailsPart">
+				<h2>WELCOME</h2>
+				<h2>Manage your work! Be successful!</h2>				
+				<h2>"Project manager" can help you!</h2>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

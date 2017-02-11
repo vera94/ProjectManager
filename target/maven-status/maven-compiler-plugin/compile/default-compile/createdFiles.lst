@@ -1,0 +1,12 @@
+model\User.class
+model\User$Role.class
+dao\ProjectDao.class
+model\Task.class
+dao\TaskDao.class
+service\UserService.class
+service\TaskService.class
+service\App.class
+model\Project.class
+testPackage\hello.class
+dao\UserDao.class
+service\ProjectService.class
